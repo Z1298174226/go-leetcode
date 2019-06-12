@@ -1,18 +1,10 @@
-package main
+package string
 
 import (
 	"container/list"
-	"fmt"
 )
 
-func main() {
-	f := longestParenthesis
-	fmt.Println(f(")))"))
-	f = longestParenthesisUpdate
-	fmt.Println(f("()"))
-}
-
-func longestParenthesis(str string) int {
+func LongestParenthesis(str string) int {
 	len := len(str)
 	dp := make([]int, len)
 	result := 0
@@ -37,7 +29,7 @@ func longestParenthesis(str string) int {
 	return result
 }
 
-func longestParenthesisUpdate(str string) int {
+func LongestParenthesisUpdate(str string) int {
 	result := 0
 	last := -1
 	list := list.New()

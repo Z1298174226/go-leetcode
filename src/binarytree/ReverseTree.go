@@ -1,4 +1,4 @@
-package main
+package binarytree
 
 import (
 	"container/list"
@@ -11,7 +11,7 @@ type Tree struct {
 	val   int
 }
 
-func preReverse(root *Tree) {
+func PreReverse(root *Tree) {
 	l := list.New()
 	currentNode := root
 	for {
@@ -41,7 +41,7 @@ func preReverse(root *Tree) {
 	}
 }
 
-func postReverse(root *Tree) {
+func PostReverse(root *Tree) {
 	currentNode := root
 	var lastNode *Tree
 	l := list.New()
@@ -77,9 +77,4 @@ func postReverse(root *Tree) {
 			}
 		}
 	}
-}
-
-func main() {
-	root := Tree{left: &Tree{left: nil, right: &Tree{left: nil, right: nil, val: 3}, val: 2}, right: nil, val: 1}
-	postReverse(&root)
 }
