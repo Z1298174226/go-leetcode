@@ -79,7 +79,7 @@ func SwapHeap(i int, j int, arr pointInt) {
 }
 
 func LessHeap(i int, j int, arr pointInt) bool {
-	return (*arr)[i-1] < (*arr)[j-1]
+	return (*arr)[i-1] > (*arr)[j-1]
 }
 
 func sinkOperation(left int, right int, arr pointInt) {
